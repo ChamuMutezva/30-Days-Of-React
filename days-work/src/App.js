@@ -1,11 +1,9 @@
 import React from  'react'
-//import MappingArrays from './day06/mapping'
-import NumberGenerator from './day06/numberGenerator'
-
+import Main from './day06/main'
 const App = () => {
     return(
         <>         
-            <NumberGenerator />
+            <Main />
         </>
     )
 }
