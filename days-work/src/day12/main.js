@@ -11,11 +11,13 @@ class Main extends Component {
 
     handleChange = (e) => {
         const { name, value } = e.target;
+        console.log(e.target)
         this.setState({ [name]: value })
     }
 
     handleSubmit = (e) => {
         e.preventDefault();
+        console.log(e.target)
         console.log(this.state)
     }
     render() {
