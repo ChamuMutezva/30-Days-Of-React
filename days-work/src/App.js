@@ -1,10 +1,10 @@
 import React from  'react'
-import Main2 from './day14/derivedStates'
+import Main3 from './day14/componentDidMount'
 //import FormsPart1 from './day12/formsPart1'
 const App = () => {
     return(
         <>         
-            <Main2 firstName="Chamu"/>
+            <Main3 />
         </>
     )
 }
