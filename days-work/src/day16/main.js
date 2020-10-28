@@ -1,35 +1,56 @@
-import React from 'react'
-//import { BrowserRouter, Route, NavLink, Switch, Redirect, Prompt, withRouter,} from 'react-router-dom'
-import { BrowserRouter as Router, Route } from 'react-router-dom';
-import Home from './home'
+import React from "react";
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link
+} from "react-router-dom";
+//import Home from './home'
 
 
-// About component
-const About = (props) => <h1>About Us</h1>
-// Contact component
-const Contact = (props) => <h1>Contact us</h1>
-// Challenge component
-const Challenges = (props) => (
-    <div>
-        <h1>30 Days Of React Challenge</h1>
-    </div>
-)
+function Home() {
+    return <h2>Home</h2>;
+  }
+  
+  function About() {
+    return <h2>About</h2>;
+  }
+  
+  function Users() {
+    return <h2>Users</h2>;
+  }
 
-class Main extends React.Component {
-    render() {
-        return (
-            <div>
-                hello
-                <Router>
-                    <div className='App'>
-                        <Route path='./home' component={Home} />
-                        <Route path='/about' component={About} />
-                        <Route path='/contact' component={Contact} />
-                        <Route path='/challenges' component={Challenges} />
-                    </div>
-                </Router>
-            </div>
-        )
-    }
+export default function Main() {
+    return (
+      <Router>
+        <div>
+          <nav>
+            <ul>
+              <li>
+                <Link to="/">Home</Link>
+              </li>
+              <li>
+                <Link to="/about">About</Link>
+              </li>
+              <li>
+                <Link to="/users">Users</Link>
+              </li>
+            </ul>
+          </nav>
+   {/* A <Switch> looks through its children <Route>s and
+            renders the first one that matches the current URL. */}
+        <Switch>
+          <Route path="/about">
+            <About />
+          </Route>
+          <Route path="/users">
+            <Users />
+          </Route>
+          <Route path="/">
+            <Home />
+          </Route>
+        </Switch>
+      </div>
+    </Router>
+  );
 }
-export default Main

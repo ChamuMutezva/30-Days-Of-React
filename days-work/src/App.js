@@ -1,10 +1,10 @@
 import React from 'react'
 //import Main3 from './day14/componentDidMount'
-import Main from './day16/main'
+import Main3 from './day16/main3'
 const App = () => {
     return(
         <>         
-            <Main />
+            <Main3 />
         </>
     )
 }
