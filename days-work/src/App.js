@@ -1,10 +1,10 @@
 import React from 'react'
-//import Main3 from './day14/componentDidMount'
-import Main3 from './day16/main3'
+import Cats from './day17/catseg'
+//import Nesting from './day16/nesting'
 const App = () => {
     return(
         <>         
-            <Main3 />
+            <Cats />
         </>
     )
 }
