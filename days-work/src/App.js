@@ -1,10 +1,10 @@
 import React from 'react'
-import Cats from './day17/catseg'
+import Main2 from './day22/main2'
 //import Nesting from './day16/nesting'
 const App = () => {
     return(
         <>         
-            <Cats />
+            <Main2 />
         </>
     )
 }
